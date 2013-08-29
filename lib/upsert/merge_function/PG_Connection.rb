@@ -49,7 +49,7 @@ class Upsert
             bind_params << "$#{i}::text[]"
             i += 1
           end
-          %{SELECT #{name}(#{bind_params.join(', ')})}
+          %{SELECT #{name}()}
         end
       end
     end
